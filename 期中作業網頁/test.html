@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            color: black;
+        }
+
+        #light {
+            background-color: rgb(255, 255, 255);
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            transform: translate(-100px, -100px);
+            filter: blur(10px);
+        }
+
+        h2 {
+            color: white;
+            font-size: 15em;
+            text-align: center;
+            margin-top: 150px;
+
+        }
+        .text{
+            mix-blend-mode: darken;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div id="light">
+        <div class="text">
+            <h2>UwU</h2>
+        </div>
+
+    </div>
+
+
+    <script>
+        var light = document.getElementById("light");
+        document.addEventListener("mousemove", function (e) {
+            light.style.top = e.pageY + "px"
+            light.style.left = e.pageX + "px";
+        })
+        // pos.onmousemove = function (e) {
+        //     pos.style.setProperty("--x", e.clientX + "px");
+        //     pos.style.setProperty("--y", e.clienty + "py");
+        // }
+    </script>
+</body>
+
+</html>

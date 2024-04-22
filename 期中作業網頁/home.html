@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h2>UwU</h2>
+    </section>
+    <button id="b1">sketch</button>
+    <button id="b2">video</button>
+    <div class="light"></div>
+    <script>
+        // Flashlight
+        var pos = document.documentElement;
+        pos.addEventListener("mousemove", e => {
+            pos.style.setProperty("--x", e.clientX + "px");
+            pos.style.setProperty("--y", e.clientY + "px");
+        })
+        // function onmousemove(){
+        //     pos.style.setProperty("--x", e.clientX + "px");
+        //     pos.style.setProperty("--y", e.clientY + "px");
+        // }
+
+        // button
+        var myButton1 = document.getElementById("b1");
+        myButton1.addEventListener("click", function() {
+            window.location.href ="sketch.html";
+        });
+
+        var myButton2 = document.getElementById("b2");
+        myButton2.addEventListener("click", function() {
+            window.location.href ="video.html";
+        });
+    </script>
+</body>
+
+</html>
